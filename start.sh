@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -d -p 4001:4000 --cap-add=SYS_PTRACE nomachine
+docker run --name ubuntu -d -p 4000:4000 --cap-add=SYS_ADMIN --cap-add=SYS_PTRACE tperalta82/ubuntu-nomachine
