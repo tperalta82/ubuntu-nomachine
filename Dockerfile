@@ -15,6 +15,9 @@ RUN wget https://download.nomachine.com/download/6.5/Linux/nomachine_6.5.6_9_amd
 
 RUN dpkg -i /nomachine.deb
 
+RUN apt-get clean
+RUN apt-get autoclean
+
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -r nomachine -g 433 && \
